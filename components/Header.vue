@@ -10,30 +10,30 @@ const path = computed(() => route.path)
 let allLinks = reactive([
 	{
 
-		title: 'home.',
+		title: 'home',
 		path: '/',
 		active: false
 	},
 	{
-		title: 'my_works.',
-		path: '/my_works',
+		title: 'my works',
+		path: '/work',
 		active: path.value == '/my_works' ? true : false
 	},
 	{
-		title: 'my_skills.',
+		title: 'my skills',
 		path: '/skills',
 		active: path.value == '/skills' ? true : false
 	},
 	{
-		title: 'about_me.',
+		title: 'about me',
 		path: '/about',
 		active: false
 	},
-	{
-		title: 'feedbacks.',
-		path: '/feedbacks',
-		active: false
-	},
+	// {
+	// 	title: 'feedbacks',
+	// 	path: '/feedbacks',
+	// 	active: false
+	// },
 ])
 
 const checkActiveLinks = (path) => {
@@ -57,7 +57,7 @@ const showSidebar = ref(false);
 
 <template>
 	<div>
-		<div :class="`w-full fixed top-0 left-0`">
+		<div class="w-full fixed top-0 left-0">
 			<div class="min-h-[50px] lg:w-3/4 lg:mx-auto mx-2 flex items-center justify-between">
 				<h1 class="text-3xl font-semibold tracking-wider text-white">
 					Saud

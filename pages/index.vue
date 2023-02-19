@@ -1,26 +1,34 @@
 <script setup>
 useHead({
-	title: 'Frontend engineer and designer | Vue and Nuxt senior developer | Saud',
-})
+	title:
+		"Frontend engineer and designer | Vue and Nuxt senior developer | Saud",
+});
 </script>
 
 <template>
 	<div class="flex flex-col h-full justify-center items-center">
-		<h1 class="text-5xl font-bold text-gradient">
-			Let's build a better website together.
+		<h1 class="text-5xl font-bold text-gradient loop resp">
+			Elevating Your Web Presence with Nuxt.js
 		</h1>
 		<div>
 			<div class="mt-10 text-center">
 				<div class="md:text-2xl text-xl text-white">
-					Hi. I am
-					<span class="text-secondaryTextColor font-semibold">Saud</span>,
-					an <span class="text-primaryTextColor">Experienced_Vue_Nuxt_Developer</span>.
+					<span class="text-secondaryTextColor font-semibold">Saud</span>, a
+					<span class="text-primaryTextColor">Senior Frontend Developer</span>.
 				</div>
-				<div class="flex md:flex-row flex-col gap-4 justify-center items-center mt-10">
-					<a class="bg-primaryTextColor glow text-center w-40 text-white p-3 rounded-md" target="_black"
-						href="https://www.upwork.com/freelancers/~013e4672812428e86a">Hire me</a>
-					<RouterLink to="/"
-						class="border-primaryTextColor border border-solid bg-transparent text-center w-40 transition-all duration-300 hover:text-white text-primaryTextColor p-3 rounded-md">
+				<div
+					class="flex md:flex-row flex-col gap-4 justify-center items-center mt-10"
+				>
+					<a
+						class="bg-primaryTextColor glow text-center w-40 text-white p-3 rounded-md"
+						target="_black"
+						href="https://www.upwork.com/freelancers/~013e4672812428e86a"
+						>Hire me</a
+					>
+					<RouterLink
+						to="/work"
+						class="border-primaryTextColor border border-solid bg-transparent text-center w-40 transition-all duration-300 hover:text-white text-primaryTextColor p-3 rounded-md"
+					>
 						View my work
 					</RouterLink>
 				</div>
@@ -30,19 +38,29 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-.text-gradient {
-	// From #A56FFE to #FF6F6F | To right
-	background: linear-gradient(90deg, #A56FFE 0%, #59ACFC 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-
+.resp {
+	// Responsive font size
+	font-size: 2.5rem;
+	// Break the text into multiple lines
+	white-space: pre-line;
+	text-align: center;
+	@media (min-width: 768px) {
+		font-size: 3.5rem;
+	}
 }
-
 .glow::before {
 	content: "";
-	background: linear-gradient(65deg,
-			#A56FFE, #002BFF, #FF00C8, #59ACFC,
-			#FF0000, #002BFF, #FF00C8, #59ACFC);
+	background: linear-gradient(
+		65deg,
+		#a56ffe,
+		#002bff,
+		#ff00c8,
+		#59acfc,
+		#ff0000,
+		#002bff,
+		#ff00c8,
+		#59acfc
+	);
 	position: absolute;
 	top: -2px;
 	left: -2px;
@@ -52,7 +70,7 @@ useHead({
 	height: calc(100%);
 	filter: blur(8px);
 	animation: glowing 20s linear infinite;
-	transition: opacity .5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 	border-radius: 10px;
 	opacity: 0;
 }

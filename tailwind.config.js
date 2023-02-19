@@ -13,9 +13,15 @@ module.exports = {
 			colors: {
 				primaryTextColor: '#A56FFE',
 				secondaryTextColor: '#59ACFC',
-				primaryBackgroundColor: '',
 			}
 		},
 	},
+	safelist: [
+		{
+			pattern: /.*/,
+		},
+	],
+	// saud zubedi - 2022-12-31 - 5:17AM IMPORTANT
+	// REMOVE THIS IS IN PRODUCTION. THIS ADD 27,000 LINES TO THE CSS FILE AND IS ONLY FOR DEVELOPMENT
 	plugins: [],
 }

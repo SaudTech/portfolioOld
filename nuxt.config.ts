@@ -1,13 +1,18 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+
 	type: 'spa',
+	ssr: false,
+	target: 'static',
+	modules: ['nuxt-icon'],
 	app: {
 		pageTransition: {
 			name: 'page',
 			mode: 'out-in'
 		},
 	},
-
 	build: {
 		postcss: {
 			postcssOptions: {
@@ -17,10 +22,14 @@ export default defineNuxtConfig({
 				},
 			},
 		},
+		transpile: [
+			'@fortawesome/fontawesome-free',
+		]
 	},
 
 	css: [
-		'@/assets/css/main.css',
+		'@/assets/css/main.scss',
+		'@/assets/css/styles.scss',
 	],
 
 })
