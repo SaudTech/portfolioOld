@@ -25,10 +25,9 @@ useHead({
 .dots {
 	height: 100vh;
 	width: 100vw;
-	background-image: radial-gradient(#212121 15%, transparent 15%),
-		radial-gradient(#ff0000 5%, transparent 10%);
+	background-image: radial-gradient(#2121217d 55%, transparent 0%);
 	background-position: 0px 0px, 100px 100px;
-	background-size: 5vmin 5vmin;
+	background-size: 7vmin 7vmin;
 	position: absolute;
 	z-index: -1;
 }

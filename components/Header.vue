@@ -15,12 +15,12 @@ let allLinks = reactive([
 		active: false
 	},
 	{
-		title: 'my works',
+		title: 'works',
 		path: '/work',
 		active: path.value == '/my_works' ? true : false
 	},
 	{
-		title: 'my skills',
+		title: 'skills',
 		path: '/skills',
 		active: path.value == '/skills' ? true : false
 	},
@@ -69,7 +69,7 @@ const showSidebar = ref(false);
 					<ul class="md:flex hidden gap-10">
 						<li v-for="(link, index) in allLinks" :key="index">
 							<NuxtLink :to="link.path"
-								:class="`text-white border-t-2 rounded-sm transition-all duration-300 hover:text-primaryTextColor ${link.active ? 'text-primaryTextColor font-medium border-t-primaryTextColor border-solid' : 'border-t-transparent'}`">
+								:class="`text-white border-t-2 rounded-sm transition-all duration-300 hover:text-primaryTextColor ${link.path == route.path ? 'text-primaryTextColor font-medium border-t-primaryTextColor border-solid' : 'border-t-transparent'}`">
 								{{ link.title }}
 							</NuxtLink>
 						</li>

@@ -47,15 +47,16 @@ const projects = [
 		["#2d80bf", "#8fc1e8"],
 		"Wellyfe is a hassle-free patient-to-doctor application that streamlines appointment bookings and enables secure, convenient communication between patients and doctors.",
 		["Vue", "Nuxt", "Tailwind"],
-		""
+		"https://wellyfedoctor.netlify.app/"
 	),
 ];
-
 </script>
 
 <template>
 	<div class="text-white">
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+		<div
+			class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4 text-center place-items-center"
+		>
 			<WorkCard
 				v-for="(project, index) in projects"
 				:key="index"
