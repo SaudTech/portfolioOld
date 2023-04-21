@@ -6,34 +6,23 @@ import { computed } from 'vue'
 const route = useRoute();
 
 const path = computed(() => route.path)
-
 let allLinks = reactive([
 	{
-
-		title: 'home',
+		
+		title: 'Home',
 		path: '/',
 		active: false
 	},
 	{
-		title: 'works',
+		title: 'Work',
 		path: '/work',
 		active: path.value == '/my_works' ? true : false
 	},
 	{
-		title: 'skills',
+		title: 'Skills',
 		path: '/skills',
 		active: path.value == '/skills' ? true : false
 	},
-	{
-		title: 'about me',
-		path: '/about',
-		active: false
-	},
-	// {
-	// 	title: 'feedbacks',
-	// 	path: '/feedbacks',
-	// 	active: false
-	// },
 ])
 
 const checkActiveLinks = (path) => {
@@ -46,6 +35,7 @@ const checkActiveLinks = (path) => {
 	})
 
 }
+
 watch(path, (newPath) => {
 	checkActiveLinks(newPath)
 })
@@ -59,9 +49,9 @@ const showSidebar = ref(false);
 	<div>
 		<div class="w-full fixed top-0 left-0">
 			<div class="min-h-[50px] lg:w-3/4 lg:mx-auto mx-2 flex items-center justify-between">
-				<h1 class="text-3xl font-semibold tracking-wider text-white">
+				<NuxtLink to="/" class="text-3xl font-semibold tracking-wider text-white">
 					Saud
-				</h1>
+				</NuxtLink>
 				<div>
 					<div class="md:hidden block" @click="(showSidebar = !showSidebar)">
 						<img src="../assets/icons/menu.svg" alt="Menu Icon">
@@ -69,7 +59,7 @@ const showSidebar = ref(false);
 					<ul class="md:flex hidden gap-10">
 						<li v-for="(link, index) in allLinks" :key="index">
 							<NuxtLink :to="link.path"
-								:class="`text-white border-t-2 rounded-sm transition-all duration-300 hover:text-primaryTextColor ${link.path == route.path ? 'text-primaryTextColor font-medium border-t-primaryTextColor border-solid' : 'border-t-transparent'}`">
+								:class="`text-white border-t-2 rounded-sm transition-all duration-300 hover:text-primaryTextColor ${link.path == route.path ? 'text-primaryTextColor border-t-primaryTextColor border-solid' : 'border-t-transparent'}`">
 								{{ link.title }}
 							</NuxtLink>
 						</li>

@@ -12,19 +12,28 @@ useHead({
 		</h1>
 		<div>
 			<div class="mt-10 text-center">
-				<div class="md:text-2xl text-xl text-white">
+				<!-- <div class="md:text-2xl text-xl text-white">
 					<span class="text-secondaryTextColor font-semibold">Saud</span>, a
 					<span class="text-primaryTextColor">Senior Frontend Developer</span>.
+				</div> -->
+				<div class="md:text-2xl text-xl text-white">
+					Saud, a Senior Frontend Developer.
 				</div>
 				<div
 					class="flex md:flex-row flex-col gap-4 justify-center items-center mt-10"
 				>
-					<a
+					<!-- <a
 						class="bg-primaryTextColor glow text-center w-40 text-white p-3 rounded-md"
 						target="_black"
 						href="https://www.upwork.com/freelancers/~013e4672812428e86a"
 						>Hire me</a
+					> -->
+					<RouterLink
+						to="/contact"
+						class="bg-primaryTextColor glow  text-center w-40 transition-all duration-300 text-white p-3 rounded-md hover:shadow-md"
 					>
+						Contact
+					</RouterLink>
 					<RouterLink
 						to="/work"
 						class="border-primaryTextColor border border-solid bg-transparent text-center w-40 transition-all duration-300 hover:text-white text-primaryTextColor p-3 rounded-md"
@@ -94,7 +103,7 @@ useHead({
 	opacity: 0.6;
 }
 
-.glow:active:after {
-	background: transparent;
-}
+// .glow:active:after {
+// 	background: transparent;
+// }
 </style>

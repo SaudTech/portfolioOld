@@ -8,7 +8,7 @@ useHead({
 
 <template>
 	<div>
-		<div class="bg-gray-900 z-[1] bg-opacity-95 overflow-x-hidden min-h-screen">
+		<div class="bg-black z-[1] bg-opacity-95 overflow-x-hidden min-h-screen">
 			<div class="dots"></div>
 			<Header />
 			<main
@@ -25,9 +25,9 @@ useHead({
 .dots {
 	height: 100vh;
 	width: 100vw;
-	background-image: radial-gradient(#2121217d 55%, transparent 0%);
+	background-image: radial-gradient(black 33%, transparent 0%);
 	background-position: 0px 0px, 100px 100px;
-	background-size: 7vmin 7vmin;
+	background-size: 5vmin 5vmin;
 	position: absolute;
 	z-index: -1;
 }

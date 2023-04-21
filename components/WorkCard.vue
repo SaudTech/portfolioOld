@@ -1,5 +1,5 @@
 <template>
-	<div class="text-white card min-w-[200px]">
+	<div class="text-white card bg-black/40 border border-solid border-white/25 min-w-[200px]">
 		<div class="flex flex-col items-center">
 			<!-- <img
 				:src="details.image"
@@ -13,8 +13,10 @@
 					</h1>
 					<div :style="customUnderline"></div>
 				</div>
-	
-				<p class="text-sm mt-2 h-28 overflow-y-auto">{{ details.description }}</p>
+
+				<p class="text-sm mt-2 h-28 overflow-y-auto">
+					{{ details.description }}
+				</p>
 				<div class="flex flex-wrap gap-2 mt-4">
 					<span
 						v-for="(tech, index) in details.tech"
@@ -38,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+
 const props = defineProps({
 	details: {
 		type: Object,
@@ -58,9 +61,8 @@ const textShadow = {
 
 <style lang="scss">
 .card {
-	background-color: #1a1a1a;
+	// background-color: #1a1a1a;
 	border-radius: 10px;
 	padding: 1rem;
 }
-
 </style>

@@ -10,6 +10,8 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.10",
+		"@vueuse/core": "^9.13.0",
+		"@vueuse/nuxt": "^9.13.0",
 		"autoprefixer": "^10.4.13",
 		"nuxt": "3.0.0-rc.12",
 		"nuxt-icon": "^0.1.8",

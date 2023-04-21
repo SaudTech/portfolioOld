@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	type: 'spa',
 	ssr: false,
 	target: 'static',
-	modules: ['nuxt-icon'],
+	modules: ['nuxt-icon', '@vueuse/nuxt'],
 	app: {
 		pageTransition: {
 			name: 'page',
