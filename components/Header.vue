@@ -11,34 +11,20 @@ let allLinks = reactive([
 		
 		title: 'Home',
 		path: '/',
-		active: false
 	},
 	{
 		title: 'Work',
 		path: '/work',
-		active: path.value == '/my_works' ? true : false
 	},
 	{
 		title: 'Skills',
 		path: '/skills',
-		active: path.value == '/skills' ? true : false
+	},
+	{
+		title: 'Contact',
+		path: '/contact',
 	},
 ])
-
-const checkActiveLinks = (path) => {
-	allLinks.forEach(each => {
-		if (each.path == path ? path : path.value) {
-			each.active = true;
-			return
-		}
-		each.active = false;
-	})
-
-}
-
-watch(path, (newPath) => {
-	checkActiveLinks(newPath)
-})
 
 const showSidebar = ref(false);
 
