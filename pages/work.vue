@@ -15,15 +15,11 @@ class Project {
 		color: string[],
 		description: string,
 		tech: string[],
-		link: string,
-		image: string = "https://picsum.photos/200/300"
 	) {
 		this.title = title;
 		this.color = color;
 		this.description = description;
 		this.tech = tech;
-		this.link = link;
-		this.image = image;
 	}
 }
 
@@ -33,21 +29,18 @@ const projects = [
 		["#37A101", "#398251"],
 		"Emvive is a company management system that includes functionality to generate E-invoices in compliance with the Zatca regulations in Saudi Arabia, and to manage the company's employees, customers, and suppliers.",
 		["Vue"],
-		"https://emvivee.000webhostapp.com/"
 	),
 	new Project(
 		"Kenroz",
 		["#7367f0", "#702882"],
 		"Kenroz is a powerful and intuitive school management system that streamlines teacher and student management, simplifies fee collection, and automates administrative tasks to help your school run more efficiently.",
 		["Vue", "Nuxt", "Tailwind"],
-		"https://kenrozzz.000webhostapp.com/"
 	),
 	new Project(
 		"Wellyfe",
 		["#2d80bf", "#8fc1e8"],
 		"Wellyfe is a hassle-free patient-to-doctor application that streamlines appointment bookings and enables secure, convenient communication between patients and doctors.",
 		["Vue", "Nuxt", "Tailwind"],
-		"https://wellyfedoctor.netlify.app/"
 	),
 ];
 </script>

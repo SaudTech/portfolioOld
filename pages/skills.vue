@@ -2,10 +2,6 @@
 import { ref, onMounted, createApp } from "vue";
 
 class Link {
-	// title: String;
-	// gradientColors: Array<String>;
-	// para: String;
-	// link: String;
 	constructor(title, gradientColors, para, link) {
 		this.title = title;
 		this.gradientColors = gradientColors;
@@ -18,55 +14,55 @@ const skills = ref([
 	new Link(
 		"Vue JS",
 		["rgb(67,211,147)", "rgb(96,136,245)"],
-		"My right hand ❤, with over 5 projects, 10 small projects, and with 1 year of experience.",
+		"My right hand ❤. Expertise in Vue js as primary framework with 2 years of experience",
 		"https://vuejs.org/"
 	),
 	new Link(
 		"Nuxt JS",
 		["rgb(129,239,192)", "rgb(0,220,130)"],
-		"My go-to framework ❤, with over 5 projects, 10 small projects, and with 8 months of experience.",
+		"Experienced in Nuxt.js for Vue with over a year as primary sub-framework.",
 		"https://nuxt.com/"
 	),
 	new Link(
 		"Javascript",
 		["rgb(252,221,1)", "rgb(252,221,1)"],
-		"My go-to framework ❤, with over 5 projects, 10 small projects, and with 2 year of experience.",
+		"Proficient in JavaScript with 2 years of experience as primary language.",
 		"https://developer.mozilla.org/en-US/docs/Web/javascript"
 	),
 	new Link(
 		"Vuetify JS",
 		["rgb(174,220,254)", "rgb(22,150,247)"],
-		"With over 5 projects, 10 small projects, and with 1 year of experience.",
+		"With over 4 projects, 14 small projects. and with a year of experience",
 		"https://vuetifyjs.com/"
 	),
 	new Link(
 		"Tailwind CSS",
 		["rgb(56,189,248)", "rgb(106,130,246)"],
-		"With over 5 projects, 10 small projects, and with 1 year of experience.",
+		"With over 4 projects, 14 small projects, and with a year of experience.",
 		"https://tailwindcss.com/"
 	),
 	new Link(
 		"SCSS",
 		["rgb(207,100,154)", "rgb(207,100,154)"],
-		"With over 5 projects, 10 small projects, and with 1 year of experience.",
+		"With over 3 projects and with under a year of experience.",
 		"https://sass-lang.com/"
 	),
 	new Link(
 		"Git",
 		["rgb(244,76,39)", "rgb(244,76,39)"],
-		"With over 5 projects, 10 small projects, and with 1 year of experience.",
+		"With over countless projects and with 2 year of experience.",
 		"https://git-scm.com/"
 	),
 	new Link(
 		"BitBucket",
 		["rgb(38,133,254)", "rgb(38,133,254)"],
-		"My work place ❤, with over 5 projects, 10 small projects, and with 1 year of experience.",
+		"My work place ❤, with over countless projects, and with a year of experience.",
 		"https://bitbucket.org/"
 	),
 	new Link(
 		"Github",
 		["rgb(255,254,254)", "rgb(255,254,254)"],
-		"My work place ❤, with over 5 projects, 10 small projects, and with 1 year of experience.",
+		"My work place ❤, with over 15 projects and with 2 year of experience.",
 		"https://github.com/"
 	),
 ]);
@@ -87,24 +83,24 @@ onMounted(() => {
 </script>
 
 <template>
-	<div class="flex flex-col h-full items-center">
+	<div class="flex flex-col z-10 h-full items-center">
 		<h1 class="text-5xl font-bold text-gradient loop">My skills.</h1>
 		<div>
-			<div class="md:text-xl text-lg text-white">
+			<div class="md:text-xl text-lg text-center text-white">
 				List of my skills gathered throughout a year.
 			</div>
 		</div>
 
 		<div
 			ref="cardsDiv"
-			class="w-full cards text-left inline-grid gap-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 grid-flow-row-dense mt-10"
+			class="w-full cards text-left z-10 mt-10"
 		>
 			<div
-				class="card w-full flex items-center justify-start glass-morphism min-h-[150px] p-2"
+				class="card flex items-center justify-start glass-morphism min-h-[150px] p-2"
 				v-for="(each, index) in skills"
 				:key="index"
 			>
-				<div class="w-3/12 h-full grid place-items-center text-center">
+				<div class="w-full h-full grid place-items-center text-center">
 					<a
 						:href="each.link"
 						target="_blank"

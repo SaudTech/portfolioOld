@@ -1,26 +1,41 @@
 <script setup>
+import { useRoute } from "vue-router";
+
 const props = defineProps({
 	links: {
 		type: Array,
 		required: true,
-	}
-})
-// JSON.parse(JSON.stringify(props.links))
+	},
+});
+const route = useRoute();
+
 </script>
 
 <template>
 	<div
-		class="md:hidden block h-screen w-full absolute top-0 right-0 z-10 py-3 backdrop-blur-sm bg-slate-800 bg-opacity-90 ">
+		class="md:hidden block h-screen w-full absolute top-0 right-0 z-[9999] py-3 backdrop-blur-sm bg-slate-800 bg-opacity-90"
+	>
 		<div class="w-full flex justify-end pr-2">
-			<img src="../assets/icons/right-arrow.png" alt="Menu Icon" @click="$emit('close')" />
+			<Icon
+				name="ri:arrow-right-s-line"
+				size="4em"
+				color="white"
+				@click="$emit('close')"
+			/>
 		</div>
 		<div class="w-full text-center my-4">
 			<div>
-
 				<ul>
-					<li v-for="(each, index) in links" :key="index">
-						<NuxtLink :to="each.path"
-							:class="`${each.active ? 'text-primaryTextColor font-medium' : ''} h-10 flex justify-center items-center rounded-sm text-white text-lg font-semibold tracking-wider`">
+					<li v-for="(each, index) in links" :key="index" class="mb-3">
+						<NuxtLink
+							@click="$emit('close')"
+							:to="each.path"
+							:class="`text-white border-t-2 rounded-sm transition-all text-3xl duration-300 hover:text-primaryTextColor ${
+								each.path == route.path
+									? 'text-primaryTextColor border-t-primaryTextColor border-solid'
+									: 'border-t-transparent'
+							}`"
+						>
 							{{ each.title }}
 						</NuxtLink>
 					</li>

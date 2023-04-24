@@ -13,6 +13,11 @@ export default defineNuxtConfig({
 			mode: 'out-in'
 		},
 	},
+	head: {
+		link: [
+		  { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' }
+		]
+	  },
 	build: {
 		postcss: {
 			postcssOptions: {

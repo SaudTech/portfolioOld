@@ -1,11 +1,8 @@
 <template>
-	<div class="text-white card bg-black/40 border border-solid border-white/25 min-w-[200px]">
+	<div
+		class="text-black card bg-black/30 border border-solid border-primaryTextColor/75 min-w-[200px]"
+	>
 		<div class="flex flex-col items-center">
-			<!-- <img
-				:src="details.image"
-				alt="project image"
-				class="w-full h-64"
-			/> -->
 			<div class="flex flex-col items-center">
 				<div>
 					<h1 class="text-2xl font-bold mt-4">
@@ -21,26 +18,22 @@
 					<span
 						v-for="(tech, index) in details.tech"
 						:key="index"
-						class="text-xs bg-gray-700 px-2 py-1 rounded-full"
+						class="text-xs text-white bg-gray-700 px-2 py-1 rounded-full"
 					>
+						
 						{{ tech }}
 					</span>
 				</div>
 			</div>
-			<a
-				:href="details.link"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="text-sm mt-4 text-blue-500"
-			>
-				View Project
-			</a>
+			<button class="cursor-not-allowed galleryBTN text-center text-sm mt-4 text-blue-500">
+				View Gallery
+				<div class="text-white/70 text opacity-0">Upcoming Soon</div>
+			</button>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-
 const props = defineProps({
 	details: {
 		type: Object,
@@ -54,14 +47,15 @@ const customUnderline = {
 	height: "2px",
 	width: "100%",
 };
-const textShadow = {
-	textShadow: details.color.map((v) => `0 0 50px ${v}`).join(", "),
-};
 </script>
 
 <style lang="scss">
+.galleryBTN:hover .text {
+	transition: 300ms;
+	opacity: 1;
+}
+
 .card {
-	// background-color: #1a1a1a;
 	border-radius: 10px;
 	padding: 1rem;
 }

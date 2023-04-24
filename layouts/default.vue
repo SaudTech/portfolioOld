@@ -4,6 +4,7 @@ useHead({
 	title:
 		"Frontend engineer and designer | Vue and Nuxt senior developer | Saud",
 });
+let topMarginToSkip = '70px'
 </script>
 
 <template>
@@ -12,8 +13,8 @@ useHead({
 			<div class="dots"></div>
 			<Header />
 			<main
-				class="lg:w-3/4 lg:mx-auto mx-2 mt-[50px]"
-				style="height: calc(100vh - 50px)"
+				:class="`lg:w-3/4 lg:mx-auto mx-2 mt-[70px]`"
+				style="height: calc(100vh - 70px)"
 			>
 				<slot />
 			</main>
@@ -25,6 +26,9 @@ useHead({
 .dots {
 	height: 100vh;
 	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
 	background-image: radial-gradient(black 33%, transparent 0%);
 	background-position: 0px 0px, 100px 100px;
 	background-size: 5vmin 5vmin;
